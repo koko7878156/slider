@@ -9,12 +9,14 @@
 
 #slider {
   height: 100vh;
+  overflow: hidden;
 }
 
 #slider .item {
   position: relative;
   height: 100%;
   width: 100%;
+  display: none;
 }
 
 #slider .item img {
@@ -23,6 +25,10 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation-name: moneyImge;
+          animation-name: moneyImge;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 #slider .item h1 {
@@ -31,6 +37,80 @@
   top: 100px;
   left: 120px;
   font-size: 40px;
-  text-shadow: 0 3px 5px 0, 0, 0.5px;
+  -webkit-animation-name: Title;
+          animation-name: Title;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+#slider .money-ative {
+  display: block;
+}
+
+#slider #prev, #slider #next {
+  width: 80px;
+  height: 150px;
+  background: #ffffff66;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#slider #prev {
+  left: 0;
+}
+
+#slider #next {
+  right: 0;
+}
+
+@-webkit-keyframes moneyImge {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes moneyImge {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes Title {
+  0% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes Title {
+  0% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=styels.css.map */
